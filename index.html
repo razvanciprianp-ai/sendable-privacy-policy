@@ -104,8 +104,10 @@
     <li>temporary files or cached media information required for processing.</li>
   </ul>
   <p>
-    This information is primarily stored locally and is not intentionally sent
-    to a SendAble-owned server.
+    This application-specific information is primarily stored locally and is
+    not intentionally sent to a SendAble-owned server. Separate third-party
+    SDKs used for advertising, consent, billing, or infrastructure may process
+    technical information as described in the sections below.
   </p>
 
   <h2>4. Internet access</h2>
@@ -152,24 +154,110 @@
     <li>accessing media specifically selected by the user;</li>
     <li>processing media in the foreground or background;</li>
     <li>displaying processing or completion notifications;</li>
-    <li>accessing the internet to retrieve platform configuration.</li>
+    <li>accessing the internet to retrieve platform configuration;</li>
+    <li>requesting advertising and privacy-consent information from Google services;</li>
+    <li>communicating with Google Play for Premium subscription information.</li>
   </ul>
   <p>SendAble does not request access to media for unrelated purposes.</p>
 
-  <h2>7. Advertising, analytics and accounts</h2>
+  <h2>7. Advertising and Google Mobile Ads</h2>
   <p>
-    The current version of SendAble does not provide user accounts and does not
-    intentionally use advertising or behavioral analytics services.
+    The free version of SendAble may display advertising provided through
+    Google AdMob and the Google Mobile Ads SDK.
   </p>
-  <p>SendAble does not sell users' personal information.</p>
   <p>
-    If future versions introduce accounts, advertising, analytics, cloud
-    processing, crash-reporting services that transmit user data, or other
-    material changes in data handling, this Privacy Policy and the Google Play
-    Data Safety declaration will be updated accordingly.
+    Depending on the user's location, consent choices, device settings, and
+    Google's applicable policies, ads may be personalized, non-personalized,
+    or otherwise limited.
+  </p>
+  <p>
+    According to Google's documentation for the Google Mobile Ads SDK, the SDK
+    may automatically collect and share certain information for advertising,
+    analytics, and fraud-prevention purposes. This may include:
+  </p>
+  <ul>
+    <li>
+      the device's IP address, which may be used to estimate general location;
+    </li>
+    <li>
+      user product interactions, such as app launches, taps, and ad/video
+      interaction information;
+    </li>
+    <li>
+      diagnostic and performance information related to the application and
+      advertising SDK;
+    </li>
+    <li>
+      device and account identifiers, which may include the Android advertising
+      ID, App Set ID, and other applicable identifiers.
+    </li>
+  </ul>
+  <p>
+    Google states that data collected by the Google Mobile Ads SDK is encrypted
+    in transit. The Android advertising ID can also be reset or deleted through
+    supported Android privacy controls.
+  </p>
+  <p>
+    SendAble does not currently integrate a separate behavioral analytics
+    service for the developer's own analytics. Advertising-related analytics
+    and measurement may, however, be performed by Google and its advertising
+    partners as part of the advertising service.
+  </p>
+  <p>
+    SendAble Premium is intended to remove SendAble's advertising placements
+    while the Premium entitlement is active.
   </p>
 
-  <h2>8. Data retention and deletion</h2>
+  <h2>8. Consent and privacy choices</h2>
+  <p>
+    SendAble integrates Google's User Messaging Platform (UMP) SDK to request
+    and manage advertising/privacy consent where Google or applicable law
+    requires it.
+  </p>
+  <p>
+    For users in regions where a privacy message is required, UMP may display a
+    consent form that allows the user to consent, refuse consent, or manage
+    privacy options. SendAble requests ads only when the UMP consent state
+    indicates that ad requests are permitted.
+  </p>
+  <p>
+    Where required by UMP, SendAble may also display a
+    <strong>Privacy choices</strong> or
+    <strong>Opțiuni de confidențialitate</strong> entry in Settings so the user
+    can reopen Google's privacy-options form.
+  </p>
+
+  <h2>9. Subscriptions and Google Play Billing</h2>
+  <p>
+    SendAble may offer an optional Premium subscription through Google Play.
+    Google Play handles the purchase and payment process under Google's own
+    terms and privacy practices.
+  </p>
+  <p>
+    SendAble may receive subscription-related information from Google Play that
+    is necessary to display localized pricing, determine whether a Premium
+    entitlement is active, restore an existing subscription, and process the
+    subscription experience in the application.
+  </p>
+  <p>
+    SendAble does not receive or store the user's full payment-card details.
+    Payment-method information is handled by Google Play.
+  </p>
+
+  <h2>10. Accounts and sale of personal information</h2>
+  <p>
+    SendAble does not currently provide a SendAble user account system.
+  </p>
+  <p>
+    SendAble does not sell users' personal information.
+  </p>
+  <p>
+    Data processed by third-party services such as Google AdMob, Google Play,
+    GitHub, or destination applications is subject to those services' own
+    privacy policies and terms.
+  </p>
+
+  <h2>11. Data retention and deletion</h2>
   <p>
     Data stored locally by SendAble remains on the device until it is removed
     by the user, removed through available application controls, deleted by
@@ -187,21 +275,23 @@
     remote SendAble account data requiring an account-deletion request.
   </p>
 
-  <h2>9. Security</h2>
+  <h2>12. Security</h2>
   <p>
     SendAble is designed to minimize transmission of user media by performing
     its core media-preparation operations locally on the device.
   </p>
   <p>
-    Network connections used for platform configuration use HTTPS where
-    supported by the configured service.
+    Network connections used for platform configuration and supported
+    third-party SDK communication use secure transport where provided by the
+    relevant service. Google states that data collected by the Google Mobile
+    Ads SDK is encrypted in transit.
   </p>
   <p>
     No method of electronic storage or transmission can be guaranteed to be
     completely secure.
   </p>
 
-  <h2>10. Children's privacy</h2>
+  <h2>13. Children's privacy</h2>
   <p>
     SendAble is not specifically designed to collect personal information from
     children. The application does not intentionally request a child's name,
@@ -209,18 +299,41 @@
     information as part of its core functionality.
   </p>
 
-  <h2>11. Third-party services</h2>
+  <h2>14. Third-party services</h2>
   <p>
-    SendAble may interact with third-party applications or infrastructure,
-    including services selected by the user for sharing and hosting services
-    used to retrieve platform configuration.
+    SendAble may interact with third-party applications and infrastructure,
+    including:
   </p>
+  <ul>
+    <li>
+      Google AdMob / Google Mobile Ads SDK for advertising;
+    </li>
+    <li>
+      Google User Messaging Platform (UMP) for privacy and consent management;
+    </li>
+    <li>
+      Google Play / Google Play Billing for Premium subscription purchases and
+      entitlement information;
+    </li>
+    <li>
+      GitHub-hosted infrastructure used to retrieve SendAble platform-rule
+      configuration;
+    </li>
+    <li>
+      applications chosen by the user for sharing, such as WhatsApp, Telegram,
+      Instagram, Facebook, email applications, or other compatible services.
+    </li>
+  </ul>
   <p>
     These services operate independently from SendAble and are governed by
-    their own privacy policies and terms.
+    their own privacy policies and terms. Google's privacy information is
+    available at
+    <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>
+    and information about Google's advertising technologies is available at
+    <a href="https://policies.google.com/technologies/ads">https://policies.google.com/technologies/ads</a>.
   </p>
 
-  <h2>12. Changes to this Privacy Policy</h2>
+  <h2>15. Changes to this Privacy Policy</h2>
   <p>
     This Privacy Policy may be updated when SendAble's features, data
     practices, third-party integrations, or legal requirements change.
@@ -230,7 +343,7 @@
     appropriate.
   </p>
 
-  <h2>13. Contact</h2>
+  <h2>16. Contact</h2>
   <p>
     <strong>Developer and data controller:</strong> Pălimariu Răzvan-Ciprian<br>
     <strong>Developer type:</strong> Individual developer<br>
