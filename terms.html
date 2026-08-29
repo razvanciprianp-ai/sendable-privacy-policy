@@ -24,9 +24,29 @@
       background: rgba(127,127,127,0.14);
     }
     a { word-break: break-word; }
+
+    .top-nav {
+      display: flex;
+      gap: 16px;
+      margin: 0 0 28px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid rgba(127,127,127,0.25);
+    }
+    .top-nav a {
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .top-nav a[aria-current="page"] {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
+
+  <nav class="top-nav" aria-label="SendAble legal pages">
+    <a href="./">Privacy Policy</a>
+    <a href="./terms.html" aria-current="page">Terms of Use</a>
+  </nav>
   <h1>SendAble Terms of Use</h1>
   <p class="meta"><strong>Effective date:</strong> 29 August 2026</p>
 
@@ -182,5 +202,10 @@
     <strong>Contact email:</strong>
     <a href="mailto:razvanciprianp@gmail.com">razvanciprianp@gmail.com</a>
   </p>
+
+  <p style="margin-top: 40px;">
+    <a href="./">Read the SendAble Privacy Policy</a>
+  </p>
+
 </body>
 </html>
